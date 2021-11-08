@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코로나 지역현황</title>
+</head>
+<br>
+  <h1>코로나 지역현황</h1>
+  <h2>{{today}}</h2>
+  <table border = "1">
+    {% for d in t_data%}
+      <th>{{d.gubun}}</th>
+    {% endfor%}
+    <tr>
+      {% for d in t_data%}
+        <td>{{d.incDec}}</td>
+      {% endfor%}
+    </tr>
+  </table>
+  <h2>{{yes}}</h2>
+  <table border = "1">
+    {% for d in y_data%}
+      <th>{{d.gubun}}</th>
+    {% endfor%}
+    <tr>
+      {% for d in y_data%}
+        <td>{{d.incDec}}</td>
+      {% endfor%}
+    </tr>
+  </table>
+
+</body>
+</html>
